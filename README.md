@@ -32,3 +32,41 @@ Images are resized to:
 
 ```text
 180 × 180 × 3
+
+🧠 Model Architecture
+Input Image
+     ↓
+Data Augmentation
+     ↓
+Rescaling
+     ↓
+Conv2D - 32 filters
+     ↓
+MaxPooling
+     ↓
+Conv2D - 64 filters
+     ↓
+MaxPooling
+     ↓
+Conv2D - 128 filters
+     ↓
+MaxPooling
+     ↓
+GlobalAveragePooling2D
+     ↓
+Dense - 128 neurons
+     ↓
+Dropout - 0.5
+     ↓
+Sigmoid
+     ↓
+Cat / Dog
+
+🔧 Techniques Used
+Data Augmentation
+ *Random Horizontal Flip
+ *Random Rotation
+ *Random Zoom
+Regularization
+ *Dropout
+ *Early Stopping
